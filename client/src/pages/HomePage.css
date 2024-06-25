@@ -123,46 +123,48 @@ h3 {
     color: #0e0d0e;
 }
 
-.link1{
+.link1 {
     color: #000000;
 }
 
 
 .register-page {
-    background: url('../image3.jpg') no-repeat center center fixed; /* Update with correct path */
+    background: url('../image3.jpg') no-repeat center center fixed;
+    /* Update with correct path */
     background-size: cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .form-container {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     color: white;
     max-width: 400px;
     width: 100%;
-  }
-  
-  h1 {
+}
+
+h1 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .form-container .ant-form-item-label > label {
+}
+
+.form-container .ant-form-item-label>label {
     color: #ffffff;
-  }
-  
-  .form-container .link1 {
+}
+
+.form-container .link1 {
     color: #ffffff;
     text-decoration: underline;
-  }
-  
-  .form-container .btn {
+}
+
+.form-container .btn {
     width: 100%;
     background-color: #007bff;
     border: none;
@@ -172,23 +174,23 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  .form-container .btn:hover {
+}
+
+.form-container .btn:hover {
     background-color: #0056b3;
-  }
-  
-  .d-flex {
+}
+
+.d-flex {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .btn-secondary {
+}
+
+.btn-secondary {
     background-color: #6c757d;
     color: #fff;
-  }
+}
 
-  .btn1 {
+.btn1 {
     display: inline-block;
     background-color: #ec4e4e;
     color: #080707;
@@ -197,24 +199,36 @@ h3 {
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
 .btn1:hover {
     background-color: #90ee90;
 }
 
+.row {
+    margin-left: 20px;
+}
+
 
 .navbar-brand {
-    font-size: xxx-large; /* Maintain the original large font size */
-    color: #d1335d; /* Original color */
-    font-weight: bold; /* Make the text bold for emphasis */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: xxx-large;
+    /* Maintain the original large font size */
+    color: #d1335d;
+    /* Original color */
+    font-weight: bold;
+    /* Make the text bold for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Add a subtle shadow for depth */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
 }
 
 .navbar-brand:hover {
-    transform: scale(1.1); /* Scale up the text on hover for a slight zoom effect */
-    color: #d1335d;/* Darken the color slightly on hover */
-    text-decoration: none; /* Remove underline if it exists */
+    transform: scale(1.1);
+    /* Scale up the text on hover for a slight zoom effect */
+    color: #d1335d;
+    /* Darken the color slightly on hover */
+    text-decoration: none;
+    /* Remove underline if it exists */
 }
