@@ -183,3 +183,38 @@ h3 {
     justify-content: space-between;
   }
   
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+
+  .btn1 {
+    display: inline-block;
+    background-color: #ec4e4e;
+    color: #080707;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-left:10px;
+}
+
+.btn1:hover {
+    background-color: #90ee90;
+}
+
+
+.navbar-brand {
+    font-size: xxx-large; /* Maintain the original large font size */
+    color: #d1335d; /* Original color */
+    font-weight: bold; /* Make the text bold for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1); /* Scale up the text on hover for a slight zoom effect */
+    color: #d1335d;/* Darken the color slightly on hover */
+    text-decoration: none; /* Remove underline if it exists */
+}

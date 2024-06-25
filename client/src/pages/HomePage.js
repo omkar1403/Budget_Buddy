@@ -12,6 +12,8 @@ import Spinner from "./../components/Spinner";
 import moment from "moment";
 import Analytics from "../components/Analytics";
 import "./HomePage.css"
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 const { RangePicker } = DatePicker;
 
@@ -88,6 +90,21 @@ const HomePage = () => {
       message.error("Ftech Issue With Tranction");
     }
   };
+
+  const exportToPDF = () => {
+    const input = document.getElementById('transactions-table');
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF();
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save('transactions.pdf');
+    });
+  };
+  
+
   //useEffect Hook
   useEffect(() => {
     const getAllTransactions = async () => {
@@ -208,21 +225,29 @@ const HomePage = () => {
           />
         </div>
         <div>
-          <button
-            className="btn btn-primary"
-            onClick={() => setShowModal(true)}
-          >
-            Add New
-          </button>
-        </div>
+  <button
+    className="btn btn-primary"
+    onClick={() => setShowModal(true)}
+  >
+    Add New
+  </button>
+  <button
+    className="btn1"
+    onClick={exportToPDF}
+  >
+    Export to PDF
+  </button>
+</div>
+
       </div>
-      <div className="content">
-        {viewData === "table" ? (
-          <Table columns={columns} dataSource={allTransection} />
-        ) : (
-          <Analytics allTransection={allTransection} />
-        )}
-      </div>
+      <div className="content" id="transactions-table">
+  {viewData === "table" ? (
+    <Table columns={columns} dataSource={allTransection} />
+  ) :(
+    <Analytics allTransection={allTransection} />
+  )}
+</div>
+
       <Modal
         title={editable ? "Edit Transaction" : "Add Transection"}
         open={showModal}
