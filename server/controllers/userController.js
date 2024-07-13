@@ -1,7 +1,7 @@
 const userModel = require("../models/userModel");
 const bcrypt = require("bcryptjs");
 
-//securepassword using bcryptjs
+// securepassword using bcryptjs
 // const securePassword = async (password) => {
 //   const passwordHash = await bcrypt.hash(password, 10);
 //   console.log(passwordHash);
@@ -16,7 +16,7 @@ const loginController = async (req, res) => {
       return res.status(404).send("User Not Found");
     }
     const isMath = await bcrypt.compare(password, user.password);
-    console.log(isMath);
+    
     if (isMath) {
       return res.status(200).json({
         success: true,
